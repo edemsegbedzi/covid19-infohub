@@ -1,0 +1,6 @@
+CI is Bitbucket
+
+Deployed on Heroku under account name of segbedzi.edem@gmail.com
+
+Deployed on Heroku using heroku maven pluging:
+use command >> mvn clean heroku:deploy
