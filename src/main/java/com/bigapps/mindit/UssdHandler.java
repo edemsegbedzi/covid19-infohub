@@ -24,6 +24,8 @@ import java.util.ArrayList;
 @RequestMapping("/")
 public class UssdHandler {
 
+    @Autowired
+    Schedular schedular;
 
     @Autowired
     CaseRepository ghanaCaseRepo;
@@ -87,17 +89,8 @@ public class UssdHandler {
 
     @GetMapping("/setup")
     public String setup() {
-        WorldCase worldCase;
-        if(!ghanaCaseRepo.existsByDate(LocalDate.now())){
-            GhanaCase ghanaCase = new GhanaCase(1,2,21,2,LocalDate.now());
-            ghanaCaseRepo.save(ghanaCase);
-            worldCase = new WorldCase(12784,97636,292142,26069,LocalDate.now());
-            worldCaseRepository.save(worldCase);
-        }else{
-
-        }
-
-        return "MindIT Covid19 USSD Running";
+        schedular.getDataFromWeb();
+        return "Done";
     }
 
     @PostMapping("ussd")

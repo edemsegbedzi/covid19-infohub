@@ -22,6 +22,11 @@ public class Schedular {
 
     @Scheduled(cron = "0 */5 * * * *")
     public void run(){
+        getDataFromWeb();
+
+    }
+
+    public void getDataFromWeb() {
         Document doc = null;
         try {
             doc = Jsoup.connect("https://www.worldometers.info/coronavirus/country/ghana/").get();
@@ -84,7 +89,6 @@ public class Schedular {
 
             worldCaseRepository.save(worldCase);
         }
-
     }
 
     public Integer format(String value) {
