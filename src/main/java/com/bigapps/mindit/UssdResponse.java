@@ -16,6 +16,6 @@ import org.springframework.stereotype.Component;
 @Data
 public class UssdResponse {
     private String message;
-    private boolean continueSession;
+    private boolean continueSession = true;
 
 }

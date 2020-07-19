@@ -273,6 +273,7 @@ public class UssdHandler {
         ussdResponse.setMessage("Welcome to i-Mind Covid-19 InfoHub. Select" +
                 "\n1. Emergency Contacts\n2. Cases in Ghana\n3. Cases Worldwide  \n4. How to Protect yourself");
         setClientState(ussdRequest.getSessionId(),"welcome");
+        ussdResponse.setContinueSession(true);
         return  ussdResponse;
     }
 
