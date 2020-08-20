@@ -1,6 +1,7 @@
-CI is Bitbucket
+COVID 19 info hub
 
-Deployed on Heroku under account name of segbedzi.edem@gmail.com
+This is a USSD plattform to allow access to information and real time statistics on COVID in Ghana
+The USSD application is get data on the number of infections from https://www.worldometers.info.
 
-Deployed on Heroku using heroku maven pluging:
-use command >> mvn clean heroku:deploy
+The USSD plattform does not require internet connectivity for user and is accessible from all devices.
+
